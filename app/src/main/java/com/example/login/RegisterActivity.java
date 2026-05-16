@@ -8,11 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
-public class MainActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 if(username.length() < 3 || username == null){
                     //mostrar advertencia
                     edtUsername.setError("El nombre de usuario no puede estar vacío o tener menos de 3 caracteres");
-                    Toast.makeText(MainActivity.this, "El nombre de usuario debe tener 3 o más caracteres", Toast.LENGTH_LONG).show();
+                    Toast.makeText(RegisterActivity.this, "El nombre de usuario debe tener 3 o más caracteres", Toast.LENGTH_LONG).show();
                     return;
                 }
 
@@ -52,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 if( email == null || email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()){
                     //mostrar advertencia
                     edtUsername.setError("El email contiene errores");
-                    Toast.makeText(MainActivity.this, "El email debe tener el formato correcto y no puede estar vacío", Toast.LENGTH_LONG).show();
+                    Toast.makeText(RegisterActivity.this, "El email debe tener el formato correcto y no puede estar vacío", Toast.LENGTH_LONG).show();
                     return;
                 }
 
@@ -60,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 if( password == null || password.isEmpty() || password.length() < 5){
                     //mostrar advertencia
                     edtPassword.setError("La contraseña debe tener al menos 5 caracteres");
-                    Toast.makeText(MainActivity.this, "La contraseña debe tener al menos 5 caracteres", Toast.LENGTH_LONG).show();
+                    Toast.makeText(RegisterActivity.this, "La contraseña debe tener al menos 5 caracteres", Toast.LENGTH_LONG).show();
                     return;
                 }
 
@@ -68,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 if(!password.equals(confirmPassword)){
                     //mostrar advertencia
                     edtConfirmPassword.setError("Las contraseñas no coinciden");
-                    Toast.makeText(MainActivity.this, "Debe escribir la misma contraseña en ambos campos", Toast.LENGTH_LONG).show();
+                    Toast.makeText(RegisterActivity.this, "Debe escribir la misma contraseña en ambos campos", Toast.LENGTH_LONG).show();
                     return;
                 }
 
@@ -102,6 +100,6 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
 
         //mostrar mensaje de éxito
-        Toast.makeText(MainActivity.this, "Usuario registrado correctamente", Toast.LENGTH_LONG).show();
+        Toast.makeText(RegisterActivity.this, "Usuario registrado correctamente", Toast.LENGTH_LONG).show();
     }
 }

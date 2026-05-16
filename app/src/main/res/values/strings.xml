@@ -5,6 +5,8 @@
     <string name="password_label">Password</string>
     <string name="confirm_label">Confirmar Password</string>
     <string name="email_label">Email</string>
+    
+    <!-- Texto de registro -->
     <!-- Botones -->
     <string name="guardar_button">Guardar</string>
     <string name="regresar_button">Regresar</string>
@@ -15,4 +17,11 @@
     <string name="password">Ingrese su contraseña</string>
     <string name="confirm_password">Repita su contraseña</string>
 
+    
+    <!-- Texto para login -->
+    <string name="login_title">Login de usuario</string>"
+    <string name="registrar_action">Registrar</string>
+    <string name="salir_action">Salir</string>
+    <string name="usuario">Usuario</string>
+    <string name="ingresar">Ingresar</string>
 </resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="#2560f5">
+    <item
+        android:id="@+id/registrar_action"
+        android:title="@string/registrar_action"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/salir_action"
+        android:title="@string/salir_action"
+        app:showAsAction="never" />
+</menu>
