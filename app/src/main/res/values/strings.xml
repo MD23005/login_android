@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="registerActivity_title">Nuevo usuario</string>
+    <string name="username_label">Nombre de usuario</string>
+    <string name="password_label">Password</string>
+    <string name="confirm_label">Confirmar Password</string>
+    <string name="email_label">Email</string>
+    <!-- Botones -->
+    <string name="guardar_button">Guardar</string>
+    <string name="regresar_button">Regresar</string>
+
+    <!--Edit text -->
+    <string name="Username">Ingrese su usuario</string>
+    <string name="email">Ingrese su email</string>
+    <string name="password">Ingrese su contraseña</string>
+    <string name="confirm_password">Repita su contraseña</string>
+
+</resources>
