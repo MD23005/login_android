@@ -1,5 +1,6 @@
 package com.example.login;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -72,6 +73,13 @@ public class RegisterActivity extends AppCompatActivity {
 
                 //Guardar los datos en shared preferences
                 guardarEnSharedPreferences(username, email, password);
+
+
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
+
+                //regresar al login
+                finish();
             }
         });
 

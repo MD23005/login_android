@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,21 +36,38 @@ public class LoginActivity extends AppCompatActivity {
                 //Creamos variable para gestionar las sharedPreferences
                 SharedPreferences preferences = getSharedPreferences("Users", MODE_PRIVATE);
 
-                //Almacenamos los datos obtenidos de las shared preferences
-                String username = preferences.getString("username", "");
-                String password = preferences.getString("password", "");
+                //Recoger los datos de los edit text
+                EditText edtUsuario = findViewById(R.id.edtUsuario);
+                EditText edtContra = findViewById(R.id.edtContra);
 
-                if(username.isEmpty() && password.isEmpty()){
+                //Almacenamos los datos obtenidos de las shared preferences
+                String usernameGuardado = preferences.getString("username", "");
+                String passwordGuardada = preferences.getString("password", "");
+
+                //Convertimos los datos a String
+                String inputUsuario = edtUsuario.getText().toString();
+                String inputContra = edtContra.getText().toString();
+
+                // validar campos vacíos
+                if (inputUsuario.isEmpty() || inputContra.isEmpty()) {
+                    Toast.makeText(LoginActivity.this, "Por favor, llene todos los campos", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                // Comparar los input de los usuarios con la información de SharedPreferences
+                if (!inputUsuario.equals(usernameGuardado) || !inputContra.equals(passwordGuardada)) {
                     Toast.makeText(LoginActivity.this, "Usuario y contraseña no coinciden", Toast.LENGTH_LONG).show();
                     return;
                 }
 
-                Toast.makeText(LoginActivity.this, "Bienvenido, " + username, Toast.LENGTH_LONG).show();
+                // Si el usuario existe puede acceder
+                Toast.makeText(LoginActivity.this, "Bienvenido, " + usernameGuardado, Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-
-                //redirigir al home
                 startActivity(intent);
+
+                //Cerrar la pestaña
+                finish();
             }
         });
 
@@ -80,6 +98,8 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
             // iniciar la actividad
             startActivity(intent);
+            //Cerrar la actividaad actual
+            finish();
             return true;
         } else if (id == R.id.salir_action) {
             //salir de la aplicación
