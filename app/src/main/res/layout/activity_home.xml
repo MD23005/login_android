@@ -19,7 +19,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="@string/hello"
-        app:titleTextColor="#ffffff" />
+        app:titleTextColor="#ffffff">
+
+
+    </androidx.appcompat.widget.Toolbar>
+
 
     <!-- 2. FRAGMENT CONTAINER: Ocupa el centro, entre el Toolbar y el BottomNav -->
     <androidx.fragment.app.FragmentContainerView
