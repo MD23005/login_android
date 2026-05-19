@@ -1,89 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="#F5F5F5">
+    tools:context=".ProductFragment">
 
+    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Productos disponibles"
-        android:textSize="20sp"
-        android:textColor="#2560f5"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp"/>
-
-    <!-- Producto 1 -->
-    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#FFFFFF"
-        android:padding="12dp"
-        android:layout_marginBottom="10dp">
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Laptop Dell"
-                android:textSize="15sp"
-                android:textColor="#222222"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Intel Core i5 · 8GB RAM"
-                android:textSize="12sp"
-                android:textColor="#888888"/>
-        </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="$500.00"
-            android:textSize="15sp"
-            android:textColor="#2560f5"
-            android:textStyle="bold"/>
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:text="@string/productos_fragment"
+        android:textSize="24sp"
+        android:textColor="#5487FD"/>
 
-    <!-- Producto 2 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#FFFFFF"
-        android:padding="12dp">
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mouse Logitech"
-                android:textSize="15sp"
-                android:textColor="#222222"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Inalámbrico · Ergonómico"
-                android:textSize="12sp"
-                android:textColor="#888888"/>
-        </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="$45.00"
-            android:textSize="15sp"
-            android:textColor="#2560f5"
-            android:textStyle="bold"/>
-    </LinearLayout>
-
-</LinearLayout>
+</FrameLayout>
